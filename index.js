@@ -31,3 +31,19 @@ function mostrarMasEmojis() {
 }
 
 setInterval(() => generarEmojis(5), 1500);
+
+//musica //
+window.onload = function() {
+    var audio = document.getElementById('audio');
+
+    // Intentamos reproducir el audio
+    audio.play().catch(function(error) {
+        // Si falla, mostramos un mensaje o intentamos habilitar la reproducción al interactuar con la página
+        console.log('Error de reproducción automática:', error);
+
+        // Podemos permitir la interacción del usuario si es necesario
+        document.body.addEventListener('click', function() {
+            audio.play();
+        });
+    });
+};
