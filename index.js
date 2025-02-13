@@ -1,12 +1,11 @@
-function descargarPDF() {
+function descargarImagen() {
     const link = document.createElement('a');
-    link.href = './pdfs/san valentin luna.pdf';
-    link.download = 'san valentin luna.pdf';
+    link.href = './images/sanvalentinlunaa.png'; // Asegúrate de que la imagen existe en esta ruta
+    link.download = 'sanvalentinlunaa.png'; // Nombre con el que se descargará
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
 }
-
 function generarEmojis(cantidad) {
     const emojis = [
         '<img src="images/PhotoRoom-20240424_221111.png" class="emoji-img">',
